@@ -1,0 +1,26 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+class Main {
+    public static void main(String[] args) throws Exception{
+        new Main().Ans();
+    }
+    
+    static void Recursion(int N) throws Exception{
+        if(N==1){
+            System.out.print(N+" ");
+            return;
+        }
+        Recursion(N-1);
+        System.out.print(N+" ");
+        
+    }
+    
+    static void Ans() throws Exception{
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(in.readLine());
+        Recursion(N);
+        in.close();
+    }
+}
